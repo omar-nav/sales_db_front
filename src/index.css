@@ -1,0 +1,153 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+/* barchart */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+/* nav bar */
+#logo-container {
+  background-color: #f2f2f2;
+  height: 50px;
+}
+#logo {
+  width: 134px;
+  height: 24px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: rgb(220, 40, 40);
+}
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+/* form styles start */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(220, 40, 40);
+}
+.showall {
+  margin: auto;
+  width: 50%;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+.container {
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  border-radius: 25px;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  border-radius: 25px;
+}
+.show-individual {
+  margin: auto;
+  width: 50%;
+  margin-top: 6px;
+  border-radius: 25px;
+  text-align: center; 
+  font-weight: bold;
+}
+.show-individual2 {
+  margin: auto;
+  width: 50%;
+  margin-top: 6px;
+  border-radius: 25px;
+  text-align: center;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  border-radius: 25px;
+}
+
+button {
+  background-color: #e7e7e7; 
+  color: black;
+  margin-top: 3%;
+  padding: 20px;
+  font-stretch: expanded;
+  border-radius: 25px;
+}
+button:hover {
+  background-color: rgb(220, 40, 40); 
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+  }
+}
