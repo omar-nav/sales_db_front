@@ -12,18 +12,18 @@ let cantidades = null;
 let equipos = null;
 let alcadia = null;
 // variables para sumar los montos de cada mes
-let montoDeEnero = null;
-let montoDeFebrero = null;
-let montoDeMarzo = null;
-let montoDeAbril = null;
-let montoDeMayo = null;
-let montoDeJunio = null;
-let montoDeJulio = null;
-let montoDeAgosto = null;
-let montoDeSeptiembre = null;
-let montoDeOctubre = null;
-let montoDeNoviembre = null;
-let montoDeDiciembre = null;
+let montoDeEnero = 0;
+let montoDeFebrero = 0;
+let montoDeMarzo = 0;
+let montoDeAbril = 0;
+let montoDeMayo = 0;
+let montoDeJunio = 0;
+let montoDeJulio = 0;
+let montoDeAgosto = 0;
+let montoDeSeptiembre = 0;
+let montoDeOctubre = 0;
+let montoDeNoviembre = 0;
+let montoDeDiciembre = 0;
 
 
 class Line extends Component {
@@ -56,40 +56,40 @@ class Line extends Component {
           //si es enero agregar el valor a la variable
           for (let i = 0; i < meses.length; i++) {
             if (meses[i] === "enero" && anyos[i] === "2017") {
-              montoDeEnero += parseInt(montos[i])
+              montoDeEnero += parseFloat(montos[i])
             }
             else if (meses[i] === "febrero" && anyos[i] === "2017") {
-              montoDeFebrero += parseInt(montos[i])
+              montoDeFebrero += parseFloat(montos[i])
             }
             else if (meses[i] === "marzo" && anyos[i] === "2017") {
-              montoDeMarzo += parseInt(montos[i])
+              montoDeMarzo += parseFloat(montos[i])
             }
             else if (meses[i] === "abril" && anyos[i] === "2017") {
-              montoDeAbril += parseInt(montos[i])
+              montoDeAbril += parseFloat(montos[i])
             }
             else if (meses[i] === "mayo" && anyos[i] === "2017") {
-              montoDeMayo += parseInt(montos[i])
+              montoDeMayo += parseFloat(montos[i])
             }
             else if (meses[i] === "junio" && anyos[i] === "2017") {
-              montoDeJunio += parseInt(montos[i])
+              montoDeJunio += parseFloat(montos[i])
             }
             else if (meses[i] === "julio" && anyos[i] === "2017") {
-              montoDeJulio += parseInt(montos[i])
+              montoDeJulio += parseFloat(montos[i])
             }
             else if (meses[i] === "agosto" && anyos[i] === "2017") {
-              montoDeAgosto += parseInt(montos[i])
+              montoDeAgosto += parseFloat(montos[i])
             }
             else if (meses[i] === "septiembre" && anyos[i] === "2017") {
-              montoDeSeptiembre += parseInt(montos[i])
+              montoDeSeptiembre += parseFloat(montos[i])
             }
             else if (meses[i] === "octubre" && anyos[i] === "2017") {
-              montoDeOctubre += parseInt(montos[i])
+              montoDeOctubre += parseFloat(montos[i])
             }
             else if (meses[i] === "noviembre" && anyos[i] === "2017") {
-              montoDeNoviembre += parseInt(montos[i])
+              montoDeNoviembre += parseFloat(montos[i])
             }
             else if (meses[i] === "diciembre" && anyos[i] === "2017") {
-              montoDeDiciembre += parseInt(montos[i])
+              montoDeDiciembre += parseFloat(montos[i])
             }
             // include null validation
             else {
@@ -98,7 +98,7 @@ class Line extends Component {
           }
         }
         sumarElMontoPorMes(meses, montos);
-        console.log(typeof parseInt((montoDeEnero)))
+        console.log(montoDeAbril)
       });
   }
 
@@ -114,14 +114,14 @@ class Line extends Component {
     return (
 
       <div>
-          <div className="App">
-            <h1>Ventas por mes durante 2017</h1>
-            <LineChart
-              width={600}
-              height={400}
-              data={data}
-            />
-          </div>
+        <div className="App">
+          <h1>Ventas por mes durante 2017</h1>
+          <LineChart
+            width={600}
+            height={400}
+            data={data}
+          />
+        </div>
 
       </div>
 
