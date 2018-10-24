@@ -15,7 +15,6 @@ class Showall extends Component {
     axios.get('http://localhost:3000/showall')
       .then(res => {
         this.setState({ sales: res.data });
-        console.log(this.state.sales);
       });
   }
 
@@ -25,7 +24,7 @@ class Showall extends Component {
         <div >
           <div >
             <h3 >
-              Listado de ventas
+              Lista de Ventas
             </h3>
           </div>
           <div className="showall">
@@ -33,13 +32,13 @@ class Showall extends Component {
               <thead>
                 <tr>
                   <th> </th>
-                  <th>mes</th>
-                  <th>año</th>
-                  <th>vendedor</th>
-                  <th>monto</th>
-                  <th>cantidad</th>
-                  <th>equipo</th>
-                  <th>alcadia</th>
+                  <th>Mes</th>
+                  <th>Año</th>
+                  <th>Vendedor</th>
+                  <th>Monto</th>
+                  <th>Cantidad</th>
+                  <th>Equipo</th>
+                  <th>Alcadía</th>
                 </tr>
               </thead>
               <tbody>

@@ -26,7 +26,7 @@ let montoDeNoviembre = 0;
 let montoDeDiciembre = 0;
 
 
-class Line extends Component {
+class Line2018 extends Component {
 
   constructor(props) {
     super(props);
@@ -58,50 +58,49 @@ class Line extends Component {
         function sumarElMontoPorMes(meses, montos) {
           //si es enero agregar el valor a la variable
           for (let i = 0; i < meses.length; i++) {
-            if (meses[i] === "enero" && anyos[i] === "2017") {
-              montoDeEnero += montos[i]
+            if (meses[i] === "enero" && anyos[i] === "2018") {
+              montoDeEnero += parseInt(montos[i]);
             }
-            else if (meses[i] === "febrero" && anyos[i] === "2017") {
-              montoDeFebrero += montos[i]
+            else if (meses[i] === "febrero" && anyos[i] === "2018") {
+              montoDeFebrero += parseInt(montos[i]);
             }
-            else if (meses[i] === "marzo" && anyos[i] === "2017") {
-              montoDeMarzo += montos[i]
+            else if (meses[i] === "marzo" && anyos[i] === "2018") {
+              montoDeMarzo += parseInt(montos[i]);
             }
-            else if (meses[i] === "abril" && anyos[i] === "2017") {
-              montoDeAbril += montos[i]
+            else if (meses[i] === "abril" && anyos[i] === "2018") {
+              montoDeAbril += parseInt(montos[i]);
             }
-            else if (meses[i] === "mayo" && anyos[i] === "2017") {
-              montoDeMayo += montos[i]
+            else if (meses[i] === "mayo" && anyos[i] === "2018") {
+              montoDeMayo += parseInt(montos[i]);
             }
-            else if (meses[i] === "junio" && anyos[i] === "2017") {
-              montoDeJunio += montos[i]
+            else if (meses[i] === "junio" && anyos[i] === "2018") {
+              montoDeJunio += parseInt(montos[i]);
             }
-            else if (meses[i] === "julio" && anyos[i] === "2017") {
-              montoDeJulio += montos[i]
+            else if (meses[i] === "julio" && anyos[i] === "2018") {
+              montoDeJulio += parseInt(montos[i]);
             }
-            else if (meses[i] === "agosto" && anyos[i] === "2017") {
-              montoDeAgosto += montos[i]
+            else if (meses[i] === "agosto" && anyos[i] === "2018") {
+              montoDeAgosto += parseInt(montos[i]);
             }
-            else if (meses[i] === "septiembre" && anyos[i] === "2017") {
-              montoDeSeptiembre += montos[i]
+            else if (meses[i] === "septiembre" && anyos[i] === "2018") {
+              montoDeSeptiembre += parseInt(montos[i]);
             }
-            else if (meses[i] === "octubre" && anyos[i] === "2017") {
-              montoDeOctubre += montos[i]
+            else if (meses[i] === "octubre" && anyos[i] === "2018") {
+              montoDeOctubre += parseInt(montos[i]);
             }
-            else if (meses[i] === "noviembre" && anyos[i] === "2017") {
-              montoDeNoviembre += montos[i]
+            else if (meses[i] === "noviembre" && anyos[i] === "2018") {
+              montoDeNoviembre += parseInt(montos[i]);
             }
-            else if (meses[i] === "diciembre" && anyos[i] === "2017") {
-              montoDeDiciembre += montos[i]
+            else if (meses[i] === "diciembre" && anyos[i] === "2018") {
+              montoDeDiciembre += parseInt(montos[i]);
             }
             // include null validation
             else {
-              montoDeDiciembre += 0;
+              montoDeDiciembre += parseInt(0);
             }
           }
         }
         sumarElMontoPorMes(meses, montos);
-        console.log(montoDeAbril)
       });
   }
 
@@ -120,11 +119,11 @@ class Line extends Component {
 
       <div>
         <div className="App">
-          <h1 className="lineChartTitle">Ventas por mes durante 2017</h1>
+          <h1 className="lineChartTitle">Ventas por mes durante 2018</h1>
 
 
           <button className="displayChart" onClick={this.toggleHidden.bind(this)} >
-            mostrar gráfica
+            Mostrar gráfica
         </button>
           <div>
             {this.state.isHidden &&
@@ -135,9 +134,10 @@ class Line extends Component {
               width={600}
               height={400}
               data={data}
-              xLabel="mes"
+              xLabel="Mes"
               yLabel="$ MXN"
-              onPointHover={(obj) => `x: ${obj.x}<br />y: ${obj.y}`}
+              hideYLabel="true"
+              onPointHover={(obj) => `mes: ${obj.x}<br />monto: ${obj.y}`}
             />}
           </div>
         </div>
@@ -148,6 +148,6 @@ class Line extends Component {
   }
 }
 
-export default Line;
+export default Line2018;
 
 

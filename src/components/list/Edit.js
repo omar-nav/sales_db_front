@@ -15,7 +15,6 @@ class Edit extends Component {
     axios.get('http://localhost:3000/' + this.props.match.params.id)
       .then(res => {
         this.setState({ sale: res.data });
-        console.log(this.state.sale);
       });
   }
 
