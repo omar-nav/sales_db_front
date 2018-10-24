@@ -1,3 +1,15 @@
+Pasos para ejecutar localmente. Instalar React.js en el sistema con el siguiente comando en la terminal.
+'sudo npm install -g create-react-app'
+
+1) Clonar este repositorio
+2) Ejecutar 'npm i' adentro la carpeta
+3) Ejecutar 'npm start'
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
