@@ -6,11 +6,7 @@ import axios from 'axios';
 // define global variables for value population
 let meses = null;
 let anyos = null;
-let vendedores = null;
 let montos = null;
-let cantidades = null;
-let equipos = null;
-let alcadia = null;
 // variables para sumar los montos de cada mes
 let montoDeEnero = 0;
 let montoDeFebrero = 0;
@@ -49,11 +45,7 @@ class Line2017 extends Component {
         // an array of objects
         meses = this.state.sales.map(sale => sale.mes);
         anyos = this.state.sales.map(sale => sale.año);
-        vendedores = this.state.sales.map(sale => sale.cantidad);
         montos = this.state.sales.map(sale => sale.monto);
-        cantidades = this.state.sales.map(sale => sale.cantidad);
-        equipos = this.state.sales.map(sale => sale.equipo);
-        alcadia = this.state.sales.map(sale => sale.alcadia);
         //sumar el monto de todos los meses
         function sumarElMontoPorMes(meses, montos) {
           //si es enero agregar el valor a la variable
@@ -126,7 +118,7 @@ class Line2017 extends Component {
         </button>
           <div>
             {this.state.isHidden &&
-              <img class="loadingImage" src="https://res.cloudinary.com/davd4ynha/image/upload/v1540342369/loading.gif" alt="Loading"
+              <img className="loadingImage" src="https://res.cloudinary.com/davd4ynha/image/upload/v1540342369/loading.gif" alt="Loading"
                 width={300} height={300}></img>
             }
             {!this.state.isHidden && <LineChart
