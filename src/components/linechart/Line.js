@@ -31,8 +31,15 @@ class Line extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isHidden: true,
       sales: []
     };
+  }
+  toggleHidden() {
+    this.setState({
+      isHidden: !this.state.isHidden,
+      sales: []
+    })
   }
 
   componentDidMount() {
@@ -47,49 +54,45 @@ class Line extends Component {
         cantidades = this.state.sales.map(sale => sale.cantidad);
         equipos = this.state.sales.map(sale => sale.equipo);
         alcadia = this.state.sales.map(sale => sale.alcadia);
-
-        console.log(meses)
-        console.log(anyos)
-
         //sumar el monto de todos los meses
         function sumarElMontoPorMes(meses, montos) {
           //si es enero agregar el valor a la variable
           for (let i = 0; i < meses.length; i++) {
             if (meses[i] === "enero" && anyos[i] === "2017") {
-              montoDeEnero += parseFloat(montos[i])
+              montoDeEnero += montos[i]
             }
             else if (meses[i] === "febrero" && anyos[i] === "2017") {
-              montoDeFebrero += parseFloat(montos[i])
+              montoDeFebrero += montos[i]
             }
             else if (meses[i] === "marzo" && anyos[i] === "2017") {
-              montoDeMarzo += parseFloat(montos[i])
+              montoDeMarzo += montos[i]
             }
             else if (meses[i] === "abril" && anyos[i] === "2017") {
-              montoDeAbril += parseFloat(montos[i])
+              montoDeAbril += montos[i]
             }
             else if (meses[i] === "mayo" && anyos[i] === "2017") {
-              montoDeMayo += parseFloat(montos[i])
+              montoDeMayo += montos[i]
             }
             else if (meses[i] === "junio" && anyos[i] === "2017") {
-              montoDeJunio += parseFloat(montos[i])
+              montoDeJunio += montos[i]
             }
             else if (meses[i] === "julio" && anyos[i] === "2017") {
-              montoDeJulio += parseFloat(montos[i])
+              montoDeJulio += montos[i]
             }
             else if (meses[i] === "agosto" && anyos[i] === "2017") {
-              montoDeAgosto += parseFloat(montos[i])
+              montoDeAgosto += montos[i]
             }
             else if (meses[i] === "septiembre" && anyos[i] === "2017") {
-              montoDeSeptiembre += parseFloat(montos[i])
+              montoDeSeptiembre += montos[i]
             }
             else if (meses[i] === "octubre" && anyos[i] === "2017") {
-              montoDeOctubre += parseFloat(montos[i])
+              montoDeOctubre += montos[i]
             }
             else if (meses[i] === "noviembre" && anyos[i] === "2017") {
-              montoDeNoviembre += parseFloat(montos[i])
+              montoDeNoviembre += montos[i]
             }
             else if (meses[i] === "diciembre" && anyos[i] === "2017") {
-              montoDeDiciembre += parseFloat(montos[i])
+              montoDeDiciembre += montos[i]
             }
             // include null validation
             else {
@@ -101,6 +104,8 @@ class Line extends Component {
         console.log(montoDeAbril)
       });
   }
+
+
 
   render() {
     const data = [
@@ -115,12 +120,26 @@ class Line extends Component {
 
       <div>
         <div className="App">
-          <h1>Ventas por mes durante 2017</h1>
-          <LineChart
-            width={600}
-            height={400}
-            data={data}
-          />
+          <h1 className="lineChartTitle">Ventas por mes durante 2017</h1>
+
+
+          <button className="displayChart" onClick={this.toggleHidden.bind(this)} >
+            mostrar gráfica
+        </button>
+          <div>
+            {this.state.isHidden &&
+              <img class="loadingImage" src="https://res.cloudinary.com/davd4ynha/image/upload/v1540342369/loading.gif" alt="Loading"
+                width={300} height={300}></img>
+            }
+            {!this.state.isHidden && <LineChart
+              width={600}
+              height={400}
+              data={data}
+              xLabel="mes"
+              yLabel="$ MXN"
+              onPointHover={(obj) => `x: ${obj.x}<br />y: ${obj.y}`}
+            />}
+          </div>
         </div>
 
       </div>

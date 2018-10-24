@@ -7,8 +7,8 @@ class Create extends Component {
   constructor() {
     super();
     this.state = {
-      mes: '',
-      año: '',
+      mes: 'enero',
+      año: '2017',
       vendedor: '',
       monto: '',
       cantidad: '',
@@ -82,7 +82,8 @@ class Create extends Component {
                 <div className="col-75">
                   <select id="vendedor" name="vendedor" type="text" value={vendedor} onChange={this.onChange} placeholder="A">
                     <option value="A">A</option>
-                    <option value="C">B</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
                     <option value="D">D</option>
                     <option value="E">E</option>
                     <option value="F">F</option>
@@ -151,7 +152,8 @@ class Create extends Component {
                   </select>
                 </div>
               </div>
-              <button type="submit">Agregar</button>
+              {/* onhover property resolves timing issue */}
+              <button onHover="submit" type="submit">Agregar</button>
             </form>
           </div>
         </div>

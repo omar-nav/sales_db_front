@@ -5,7 +5,16 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
-/* barchart */
+/* linechart */
+.loadingImage {
+  margin:3px;
+}
+.lineChartTitle{
+  margin: 3px;
+}
+.displayChart {
+  margin: -3px;
+}
 .axis path,
 .axis line {
   fill: none;

@@ -154,7 +154,7 @@ class Edit extends Component {
                   </select>
                 </div>
               </div>
-              <button type="submit">Guardar cambios</button>
+              <button onHover="submit" type="submit">Guardar cambios</button>
             </form>
           </div>
         </div>
