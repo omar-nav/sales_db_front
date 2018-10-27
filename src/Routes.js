@@ -7,7 +7,6 @@ import Show from './components/list/Show';
 import Line2017 from './components/linechart/Line2017'
 import Line2018 from './components/linechart/Line2018'
 
-
 const Routes = () => {
     return (
         <Switch>

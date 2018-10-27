@@ -132,13 +132,9 @@ class Line2017 extends Component {
             />}
           </div>
         </div>
-
       </div>
-
     );
   }
 }
 
 export default Line2017;
-
-
