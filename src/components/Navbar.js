@@ -16,7 +16,7 @@ class Navbar extends Component {
             <li><Link to={`/create`}>Agregar Venta</Link></li>
             <li><Link to={`/line2017`}>Gráfica 2017</Link></li>
             <li><Link to={`/line2018`}>Gráfica 2018</Link></li>
-            <li><a href="https://mapa-de-ventas.herokuapp.com/" target="_blank" rel="noopener noreferrer">Mapa de Ventas</a></li>
+            <li><a href="https://mapa-de-ventas.herokuapp.com/">Mapa de Ventas</a></li>
           </ul>
         </div>
       </nav>
