@@ -12,7 +12,7 @@ class Showall extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/showallaxios')
+    axios.get('https://sales-db-keyence.herokuapp.com/showall')
       .then(res => {
         this.setState({ sales: res.data });
       });

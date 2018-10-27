@@ -11,11 +11,11 @@ const Routes = () => {
     return (
         <Switch>
             <Route exact path='/' component={Showall} />
-            <Route exact path='/showallaxios' component={Showall} />
+            <Route exact path='/showall' component={Showall} />
             <Route exact path='/edit/:id' component={Edit} />
             <Route exact path='/create' component={Create} />
             <Route exact path='/show/:id' component={Show} />
-            <Route exact path='/line2017' component={Line2017} />
+            <Route exlact path='/line2017' component={Line2017} />
             <Route exact path='/line2018' component={Line2018} />
         </Switch>
     )

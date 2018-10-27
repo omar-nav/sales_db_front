@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -11,10 +12,10 @@ class Navbar extends Component {
                 alt="Keyence Logo"></img>
               </a>
             </li>
-            <li><a href="/showall">Lista de Ventas</a></li>
-            <li><a href="/create">Agregar Venta</a></li>
-            <li><a href="/line2017">Gráfica 2017</a></li>
-            <li><a href="/line2018">Gráfica 2018</a></li>
+            <li><Link to={`/showall`}>Lista de Ventas</Link></li>
+            <li><Link to={`/create`}>Agregar Venta</Link></li>
+            <li><Link to={`/line2017`}>Gráfica 2017</Link></li>
+            <li><Link to={`/line2018`}>Gráfica 2018</Link></li>
             <li><a href="https://mapa-de-ventas.herokuapp.com/">Mapa de Ventas</a></li>
           </ul>
         </div>
