@@ -12,7 +12,7 @@ class Showall extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/showall')
+    axios.get('http://localhost:3000/showallaxios')
       .then(res => {
         this.setState({ sales: res.data });
       });
