@@ -11,7 +11,7 @@ class Edit extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/' + this.props.match.params.id)
+    axios.get('https://sales-db-keyence.herokuapp.com/' + this.props.match.params.id)
       .then(res => {
         this.setState({ sale: res.data });
       });

@@ -26,7 +26,7 @@ class Create extends Component {
 
     const { mes, año, vendedor, monto, cantidad, equipo, alcadia } = this.state;
 
-    axios.post('http://localhost:3000/create', { mes, año, vendedor, monto, cantidad, equipo, alcadia })
+    axios.post('https://sales-db-keyence.herokuapp.com/create', { mes, año, vendedor, monto, cantidad, equipo, alcadia })
       .then((result) => {
         this.props.history.push("/showall")
       });
