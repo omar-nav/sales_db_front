@@ -21,7 +21,7 @@ class Show extends Component {
 
   delete(id) {
     console.log(id);
-    axios.delete('http://localhost:3000/' + id)
+    axios.delete('https://sales-db-keyence.herokuapp.com/' + id)
       .then((result) => {
         this.props.history.push("/showall")
       });

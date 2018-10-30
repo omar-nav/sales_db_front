@@ -28,7 +28,7 @@ class Edit extends Component {
 
     const { mes, año, vendedor, monto, cantidad, equipo, alcadia } = this.state.sale;
 
-    axios.put('http://localhost:3000/' + this.props.match.params.id, { mes, año, vendedor, monto, cantidad, equipo, alcadia })
+    axios.put('https://sales-db-keyence.herokuapp.com/' + this.props.match.params.id, { mes, año, vendedor, monto, cantidad, equipo, alcadia })
       .then((result) => {
         this.props.history.push("/show/" + this.props.match.params.id)
       });
