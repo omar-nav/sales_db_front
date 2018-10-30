@@ -151,8 +151,7 @@ class Create extends Component {
                   </select>
                 </div>
               </div>
-              {/* onhover property resolves timing issue */}
-              <button onHover="submit" type="submit">Agregar</button>
+              <button onClick="submit" type="submit">Agregar</button>
             </form>
           </div>
         </div>
